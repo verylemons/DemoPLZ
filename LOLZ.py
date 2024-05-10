@@ -36,11 +36,6 @@ def demoTAB():
             st.image(np.array(results.render()))  
     else:
         st.title("Webcam Live Feed")
-        col1, col2 = st.beta_columns(2)
-        with col1:
-            run = st.button('Run')
-        with col2:
-            end = st.button('End Feed')
         FRAME_WINDOW = st.image([])
         camera = cv2.VideoCapture(0)
 
