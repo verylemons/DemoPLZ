@@ -4,10 +4,6 @@ from matplotlib import pyplot as plt
 import numpy as np
 import cv2
 from PIL import Image
-from streamlit_webrtc import webrtc_streamer
-import av
-
-webrtc_streamer(key="sample")
 
 #####################################################################################################################
 # DEPLOY MODEL!!!!!!
