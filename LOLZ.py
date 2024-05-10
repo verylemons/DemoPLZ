@@ -13,7 +13,7 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 #function to detect
 def detect_objects(image):
-    #image = Image.fromarray(image).convert('RGB')
+    image = Image.fromarray(image).convert('RGB')
     results = model(image)
     return results
 #####################################################################################################################
@@ -42,7 +42,7 @@ def demoTAB():
         camera = cv2.VideoCapture(0)
         while run:
             _, frame = camera.read()
-            #frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             results = detect_objects(frame)
             FRAME_WINDOW.image(np.array(results.render()))
         if end:
