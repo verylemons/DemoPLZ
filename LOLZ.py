@@ -39,7 +39,7 @@ def demoTAB():
         run = st.button('Run')
         end = st.button('End Feed')
         FRAME_WINDOW = st.image([])
-        camera = cv2.VideoCapture(0)
+        camera = cv2.VideoCapture(1)
 
         if not camera.isOpened():
             st.error("Failed to open webcam. Please check if it's connected and try again.")
