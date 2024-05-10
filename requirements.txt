@@ -4,7 +4,6 @@
 # Base ------------------------------------------------------------------------
 streamlit
 streamlit-webcam-example==0.1.0
-streamlit_webrtc
 gitpython>=3.1.30
 matplotlib>=3.3
 numpy>=1.23.5
