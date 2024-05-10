@@ -13,7 +13,7 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 #function to detect
 def detect_objects(image):
-    image = Image.fromarray(image).convert('RGB')
+    #image = Image.fromarray(image).convert('RGB')
     results = model(image)
     return results
 #####################################################################################################################
