@@ -42,9 +42,9 @@ def demoTAB():
         camera = cv2.VideoCapture(0)
         while run:
             _, frame = camera.read()
-            frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             results = detect_objects(frame)
-            FRAME_WINDOW.image(np.array(results.render()), channels="RGB")
+            FRAME_WINDOW.image(np.array(results.render()))
         camera.release()
         cv2.destroyAllWindows()
         if end:
