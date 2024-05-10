@@ -33,7 +33,7 @@ def demoTAB():
         if uploaded_image is not None:
             image = np.array(Image.open(uploaded_image))
             results = detect_objects(image)
-            st.image(np.array(results.render()), channels="RGB")  
+            st.image(np.array(results.render()))  
     else:
         st.title("Webcam Live Feed")
         run = st.button('Run')
@@ -44,7 +44,7 @@ def demoTAB():
             _, frame = camera.read()
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             results = detect_objects(frame)
-            FRAME_WINDOW.image(np.array(results.render()))
+            FRAME_WINDOW.image(np.array(results.render()), channels="RGB")
         camera.release()
         cv2.destroyAllWindows()
         if end:
