@@ -33,7 +33,7 @@ def demoTAB():
         if uploaded_image is not None:
             image = np.array(Image.open(uploaded_image))
             results = detect_objects(image)
-            st.image(np.array(results.render()))  
+            st.image(np.array(results.render()), channels="RGB")  
     else:
         st.title("Webcam Live Feed")
         run = st.button('Run')
