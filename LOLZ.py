@@ -42,6 +42,9 @@ def demoTAB():
         camera = cv2.VideoCapture(0)
         while run:
             ret, frame = camera.read()
+            if not ret:
+                st.error("Failed to retrieve frame from webcam.")
+                break
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             results = detect_objects(frame)
             FRAME_WINDOW.image(np.array(results.render()))
